@@ -1,14 +1,15 @@
 console.log("Bing BG image script is loaded!. Thanks for using Bing search script ^_^");
 
-async function fetchBingDailyImage() {
-    try {
-        const response = await fetch('get_bing_image.php');
-        const data = await response.json();
-        const imageUrl = `https://www.bing.com${data.images[0].url}`;
-        document.getElementById('imageContainer').style.backgroundImage = `url('${imageUrl}')`;
-    } catch (error) {
-        console.error('Error fetching Bing daily image:', error);
-    }
+function setRandomBackground() {
+    const totalImages = 14;
+    const today = new Date();
+    const dayOfMonth = today.getDate();
+    
+    // Ensure the image index stays within a valid range
+    const index = (dayOfMonth - 1) % totalImages + 1;
+    
+    const imageUrl = 'bg-images/pic' + index + '.webp';
+    document.getElementById('imageContainer').style.backgroundImage = "url(" + imageUrl + ")";
 }
 
-fetchBingDailyImage();
+setRandomBackground();
