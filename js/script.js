@@ -14,7 +14,7 @@ mainBtn.addEventListener("click",function(){
 
 function openTab(url) {
     window.open(url);
-}
+} 
 
 async function performSearch(query) {
     try {
@@ -34,6 +34,7 @@ async function performSearchesWithDelay() {
         await new Promise(resolve => setTimeout(resolve, 3000)); //Delay between 2 tab openings for 3 seconds
     }
     alert("Process completed!");
+    mainBtn.classList.remove("btn-clicked");
 }
 
 
