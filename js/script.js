@@ -26,6 +26,7 @@ async function performSearch(query) {
         setTimeout(() => {
             openTab.close();
         }, 1500);
+        console.clear();//Clearing console
 
     } catch (error) {
         console.error(`Error performing search: ${error}. Contact administrator by : hello@tidev.one`);
@@ -36,8 +37,10 @@ async function performSearchesWithDelay() {
     for (const item of searchItems) {
         await performSearch(item);
         await new Promise(resolve => setTimeout(resolve, 1500)); //Delay between 2 tab openings for 3 seconds
+        console.clear();//Clearing console
     }
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 500));//Wait 500ms before showing confirmation message
+    console.clear();//Clearing console
     alert("Process completed!");
     mainBtn.classList.remove("btn-clicked");
 }
