@@ -2,6 +2,7 @@ const searchItems = [
     "acer",
     "acer predator",
     "react js",
+    "gg",
     //If you want to add more items or need to change the list that suits for your preferences, feel free to add those here
 ];
 
@@ -36,6 +37,7 @@ async function performSearchesWithDelay() {
         await performSearch(item);
         await new Promise(resolve => setTimeout(resolve, 1500)); //Delay between 2 tab openings for 3 seconds
     }
+    await new Promise(resolve => setTimeout(resolve, 500));
     alert("Process completed!");
     mainBtn.classList.remove("btn-clicked");
 }
