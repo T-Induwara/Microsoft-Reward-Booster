@@ -7,6 +7,11 @@ const searchItems = [
 ];
 
 var openedTab;
+var pgTitle = document.getElementById("b-title");
+var pgBtn = document.getElementById("btn-con");
+var pgFooter = document.getElementById("footer");
+var pgPopup = document.getElementById("popup-container");
+var pgBody = document.getElementById("imageContainer");
 
 var mainBtn = document.getElementById("btn");
 mainBtn.addEventListener("click",function(){
@@ -41,7 +46,12 @@ async function performSearchesWithDelay() {
     }
     await new Promise(resolve => setTimeout(resolve, 500));//Wait 500ms before showing confirmation message
     //console.clear();//Clearing console
-    alert("Process completed!");
+
+    pgBody.style.justifyContent = "center";
+    pgPopup.style.display = "block";
+    pgTitle.style.display = "none";
+    pgBtn.style.display = "none";
+    pgFooter.style.display = "none";
     mainBtn.classList.remove("btn-clicked");
 }
 

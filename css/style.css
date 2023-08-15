@@ -13,6 +13,10 @@ body {
     color: white;
     text-align: center;
 }
+/*Predefined hide class*/
+.hide{
+    display:none;
+}
 .txt-container{
     width:80vw;
     display: flex;
@@ -108,6 +112,9 @@ a:hover{
 }
 .popup-container h2,.popup-container p,.popup-btns{
     margin-top:1rem;
+}
+.popup-container{
+    display:none;
 }
 
 
