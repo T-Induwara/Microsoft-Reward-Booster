@@ -191,7 +191,6 @@ input[type='radio'] {
     }
     .user-int-section{
         font-family: 'Urbanist', sans-serif;
-        background-color: rgba(0, 0, 0, 0.658);
         padding:4rem;
     }
     input[type='radio'] {
