@@ -42,7 +42,7 @@ async function performSearch(query) {
         
         //This code open a new tab with the Bing search results
         const openTab = window.open(`https://www.bing.com/search?q=${encodeURIComponent(query)}`);
-
+        
         setTimeout(() => {
             openTab.close();
         }, 1500);
