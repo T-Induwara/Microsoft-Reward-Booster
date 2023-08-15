@@ -80,6 +80,12 @@ async function performSearchesWithDelay() {
 
 //Click event for exiting the tab after process confirmation
 exitBtn.addEventListener("click",function(){
-    window.close();
+    pgBody.style.justifyContent = "space-between";
+
+    pgPopup.style.display = "none";
+    overlay.style.display = "none";
+
+    pgTitle.style.display = "block";
+    pgFooter.style.display = "block";
 })
 

@@ -11,12 +11,24 @@
 </head>
 <body id="imageContainer">
 <h1 class="pg-title" id="b-title">Bing Rewards Booster</h1>
-<div class="txt-container" id="btn-con">
-    <p class="btn-txt">Deactive</p>
-    <div class="btn-container" id="btn">
-        <div class="btn"></div>
+<div class="user-int-section" id="btn-con">
+    <div class="acc-type">
+        <div class="type-1">
+            <label for="account-type1">Level 1</label>
+            <input type="radio" name="account-type1" id="acc-1" value="Type 1"/>
+        </div>
+        <div class="type-2">
+            <label for="account-type2">Level 2</label>
+            <input type="radio" name="account-type2" id="acc-2" value="Type 2"/>
+        </div>
     </div>
-    <p class="btn-txt">Active</p>
+    <div class="txt-container">
+        <p class="btn-txt">Deactive</p>
+        <div class="btn-container" id="btn">
+            <div class="btn"></div>
+        </div>
+        <p class="btn-txt">Active</p>
+    </div>
 </div>
 <p class="footer-txt" id="footer">Booster V1.0 | Powered by <a href="https://tidev.one" target="_blank">T I D E V</a></p>
 <div class="popup-container" id="popup-container">
@@ -24,7 +36,7 @@
     <p>Since Microsoft rewards doesn't give points for duplicate search queries within 24 hours, there is no point of using this tool until 24 hours passes. Try again after 24 hours.</p>
     <div class="popup-btns">
         <div class="m-booster hide">Visit Mobile Booster</div>
-        <div class="tab-close" id="exit-btn">Exit Booster</div>
+        <div class="tab-close" id="exit-btn">Close Notice</div>
     </div>
 </div>
 <div class="overlay" id="overlay"></div>
