@@ -11,6 +11,7 @@ body {
     justify-content: space-between;
     font-family: Arial, sans-serif;
     color: white;
+    text-align: center;
 }
 .txt-container{
     width:80vw;
@@ -20,8 +21,8 @@ body {
     justify-content: space-between;
 }
 .btn-container{
-    width:200px;
-    height:80px;
+    width:150px;
+    height:50px;
     background-color:white;
     border-radius:100px;
     display: flex;
@@ -39,11 +40,8 @@ body {
     border-radius:100px;
     margin:0px 5px;
 }
-h1{
-    font-size:55px;
-}
 p{
-    font-size:40px;
+    font-size:20px;
 }
 a{
     color:aqua;
@@ -65,13 +63,13 @@ a:hover{
     text-align: center;
 }
 .popup-container h2{
-    font-size:25px;
+    font-size:30px;
     font-weight:700;
 }
 .popup-container p{
-    font-size:18px;
+    font-size:20px;
     font-weight: 400;
-    width:50vw;
+    width:80vw;
 }
 .popup-btns{
     display:flex;
@@ -133,5 +131,18 @@ a:hover{
     }
     p{
         font-size:16px;
+    }
+    .popup-container h2{
+        font-size:25px;
+    }
+    .popup-container p{
+        font-size:18px;
+        width:50vw;
+    }
+    .m-booster{
+        padding:10px 20px;
+        border:1px solid black;
+        border-radius:5px;
+        transition:0.6s;
     }
 }
