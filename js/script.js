@@ -9,6 +9,9 @@ const searchItemsMobile = [
     "razor blade",
     "razor blade vs msi gl",
 ]
+const searchItemsLvl1 = [
+    "razor mobile wallpapers",
+]
 
 var openedTab;
 var pgTitle = document.getElementById("b-title");
@@ -21,6 +24,7 @@ var overlay = document.getElementById("overlay");
 
 var accType1 = document.getElementById("acc-1");
 var accType2 = document.getElementById("acc-2");
+var errTxt = document.getElementById("acc-error");
 
 var mainBtn = document.getElementById("btn");
 mainBtn.addEventListener("click",function(){
@@ -49,36 +53,81 @@ async function performSearch(query) {
 
 async function performSearchesWithDelay() {
 
-    if (window.matchMedia("(max-width: 767px)").matches){
-        // The viewport is less than 768 pixels wide
-        console.log("This is a mobile device.");
-        for (const item of searchItemsMobile) {
+    accSelect:if(accType1.checked) {
+        //Account type 1 is checked
+        console.log("This is a level 1 account.");
+        for (const item of searchItemsLvl1) {
             await performSearch(item);
             await new Promise(resolve => setTimeout(resolve, 1500)); //Delay between 2 tab openings for 3 seconds
             //console.clear();//Clearing console
+        }
+
+        await new Promise(resolve => setTimeout(resolve, 500));//Wait 500ms before showing confirmation message
+        //console.clear();//Clearing console
+
+        pgBody.style.justifyContent = "center";
+
+        pgPopup.style.display = "block";
+        overlay.style.display = "block";
+
+        pgTitle.style.display = "none";
+        pgBtn.style.display = "none";
+        pgFooter.style.display = "none";
+        mainBtn.classList.remove("btn-clicked");
+    }
+    else if(accType2.checked) {
+        //Account type 2 is checked
+        if (window.matchMedia("(max-width: 767px)").matches){
+            // The viewport is less than 768 pixels wide
+            console.log("This is a mobile device.");
+            for (const item of searchItemsMobile) {
+                await performSearch(item);
+                await new Promise(resolve => setTimeout(resolve, 1500)); //Delay between 2 tab openings for 3 seconds
+                //console.clear();//Clearing console
+            }
+
+            await new Promise(resolve => setTimeout(resolve, 500));//Wait 500ms before showing confirmation message
+            //console.clear();//Clearing console
+    
+            pgBody.style.justifyContent = "center";
+    
+            pgPopup.style.display = "block";
+            overlay.style.display = "block";
+    
+            pgTitle.style.display = "none";
+            pgBtn.style.display = "none";
+            pgFooter.style.display = "none";
+            mainBtn.classList.remove("btn-clicked");
+        }
+        else{
+            console.log("This is a desktop device");
+            for (const item of searchItemsDesktop) {
+                await performSearch(item);
+                await new Promise(resolve => setTimeout(resolve, 1500)); //Delay between 2 tab openings for 3 seconds
+                //console.clear();//Clearing console
+            }
+
+            await new Promise(resolve => setTimeout(resolve, 500));//Wait 500ms before showing confirmation message
+            //console.clear();//Clearing console
+    
+            pgBody.style.justifyContent = "center";
+    
+            pgPopup.style.display = "block";
+            overlay.style.display = "block";
+    
+            pgTitle.style.display = "none";
+            pgBtn.style.display = "none";
+            pgFooter.style.display = "none";
+            mainBtn.classList.remove("btn-clicked");
         }
     }
     else{
-        console.log("This is a desktop device");
-        for (const item of searchItemsDesktop) {
-            await performSearch(item);
-            await new Promise(resolve => setTimeout(resolve, 1500)); //Delay between 2 tab openings for 3 seconds
-            //console.clear();//Clearing console
-        }
+        errTxt.style.display = "block";
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        mainBtn.classList.remove("btn-clicked");
     }
+
     
-    await new Promise(resolve => setTimeout(resolve, 500));//Wait 500ms before showing confirmation message
-    //console.clear();//Clearing console
-
-    pgBody.style.justifyContent = "center";
-
-    pgPopup.style.display = "block";
-    overlay.style.display = "block";
-
-    pgTitle.style.display = "none";
-    pgBtn.style.display = "none";
-    pgFooter.style.display = "none";
-    mainBtn.classList.remove("btn-clicked");
 }
 
 //Click event for exiting the tab after process confirmation
