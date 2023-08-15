@@ -12,16 +12,18 @@
 <body id="imageContainer">
 <h1 class="pg-title" id="b-title">Bing Rewards Booster</h1>
 <div class="user-int-section" id="btn-con">
-    <div class="acc-type">
+    <p>*Please select your account type below.</p>
+    <p class="acc-selection-error" id="acc-error">Your selection is mandatory!</p>
+    <form class="acc-type">
         <div class="type-1">
-            <label for="account-type1">Level 1</label>
-            <input type="radio" name="account-type1" id="acc-1" value="Type 1"/>
+        	<input type="radio" id="acc-1" name="account-type" value="Level 1">
+        	<label for="acc-1">Level 1</label>
         </div>
         <div class="type-2">
-            <label for="account-type2">Level 2</label>
-            <input type="radio" name="account-type2" id="acc-2" value="Type 2"/>
+        	<input type="radio" id="acc-2" name="account-type" value="Level 2">
+        	<label for="acc-2">Level 2</label>
         </div>
-    </div>
+      </form>
     <div class="txt-container">
         <p class="btn-txt">Deactive</p>
         <div class="btn-container" id="btn">

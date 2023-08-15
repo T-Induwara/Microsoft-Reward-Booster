@@ -19,6 +19,9 @@ var pgBody = document.getElementById("imageContainer");
 var exitBtn = document.getElementById("exit-btn");
 var overlay = document.getElementById("overlay");
 
+var accType1 = document.getElementById("acc-1");
+var accType2 = document.getElementById("acc-2");
+
 var mainBtn = document.getElementById("btn");
 mainBtn.addEventListener("click",function(){
     mainBtn.classList.add("btn-clicked");
