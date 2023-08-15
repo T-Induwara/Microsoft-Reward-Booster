@@ -18,7 +18,7 @@ body {
     display:none;
 }
 .txt-container{
-    width:80vw;
+    width:100%;
     display: flex;
     flex-direction:row;
     align-items: center;
@@ -127,8 +127,8 @@ a:hover{
 }
 .user-int-section{
     font-family: 'Urbanist', sans-serif;
-    background-color: rgba(0, 0, 0, 0.658);
-    padding:4rem;
+    background-color: rgba(0, 0, 0, 0.445);
+    padding:2rem 1rem;
     border-radius:8px;
 }
 .acc-type{
@@ -188,5 +188,13 @@ input[type='radio'] {
         border:1px solid black;
         border-radius:5px;
         transition:0.6s;
+    }
+    .user-int-section{
+        font-family: 'Urbanist', sans-serif;
+        background-color: rgba(0, 0, 0, 0.658);
+        padding:4rem;
+    }
+    input[type='radio'] {
+        transform: scale(2);
     }
 }
