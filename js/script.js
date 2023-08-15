@@ -2,11 +2,60 @@ const searchItemsDesktop = [
     "acer",
     "acer predator",
     "react js",
-    "gg",
+    "vs code",
+    "sliit",
+    "java",
+    "r studio",
+    "rc basher",
+    "acer predator triton",
+    "acer enduro",
+    "sims.sliit",
+    "sliit cyber security",
+    "predator helios",
+    "proton email",
+    "proton pass",
+    "proton drive",
+    "Malwarebyte",
+    "fiverr",
+    "canon",
+    "Traxxas",
+    "Traxxas max",
+    "Github",
+    "Sony",
+    "Sony hifi setup",
+    "Wifi routers",
+    "Wifi portable routers",
+    "Brave browser",
+    "Is proton safe",
+    "Does Proton protect user data?",
+    "Where is Proton located?",
+    "MSI",
+    "MSI GL",
+    "MSI or ACER Predator",
+    "MSI Modern",
     //If you want to add more items or need to change the list that suits for your preferences, feel free to add those here
 ];
 const searchItemsMobile = [
-    "bye",
+    "razor mobile",
+    "razor blade",
+    "razor blade vs msi gl",
+    "chatgpt",
+    "stackoverflow",
+    "github copilot",
+    "apple ios",
+    "apple ipad",
+    "apple macbook air",
+    "dell g3",
+    "dell g3 vs dell g7",
+    "acer predator vs acer nitro",
+    "threads",
+    "current weather",
+    "proton pass vs dashlane",
+    "cookie hijacking",
+    "ms edge vs brave",
+    "opera gx browser",
+    "razor game booster",
+    "alienware laptop",
 ]
 
 var openedTab;
@@ -16,6 +65,7 @@ var pgFooter = document.getElementById("footer");
 var pgPopup = document.getElementById("popup-container");
 var pgBody = document.getElementById("imageContainer");
 var exitBtn = document.getElementById("exit-btn");
+var overlay = document.getElementById("overlay");
 
 var mainBtn = document.getElementById("btn");
 mainBtn.addEventListener("click",function(){
@@ -66,7 +116,10 @@ async function performSearchesWithDelay() {
     //console.clear();//Clearing console
 
     pgBody.style.justifyContent = "center";
+
     pgPopup.style.display = "block";
+    overlay.style.display = "block";
+
     pgTitle.style.display = "none";
     pgBtn.style.display = "none";
     pgFooter.style.display = "none";

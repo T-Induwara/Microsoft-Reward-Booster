@@ -59,21 +59,25 @@ a:hover{
     transition:0.6s;
 }
 .popup-container{
+    display:none;
+    width:70vw;
     background-color: rgb(255, 255, 255);
     color:black;
     font-family: 'Urbanist', sans-serif;
     padding:2rem;
     border-radius:10px;
     text-align: center;
+    z-index: 20;
 }
 .popup-container h2{
     font-size:30px;
     font-weight:700;
 }
 .popup-container p{
+    text-align: center;
     font-size:20px;
     font-weight: 400;
-    width:80vw;
+    width:100%;
 }
 .popup-btns{
     display:flex;
@@ -113,9 +117,15 @@ a:hover{
 .popup-container h2,.popup-container p,.popup-btns{
     margin-top:1rem;
 }
-.popup-container{
+.overlay{
     display:none;
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index:10;
 }
+
 
 
 @media only screen and (min-width:1280px){
@@ -144,7 +154,6 @@ a:hover{
     }
     .popup-container p{
         font-size:18px;
-        width:50vw;
     }
     .m-booster{
         padding:10px 20px;
