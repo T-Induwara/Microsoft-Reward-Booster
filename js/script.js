@@ -15,6 +15,7 @@ var pgBtn = document.getElementById("btn-con");
 var pgFooter = document.getElementById("footer");
 var pgPopup = document.getElementById("popup-container");
 var pgBody = document.getElementById("imageContainer");
+var exitBtn = document.getElementById("exit-btn");
 
 var mainBtn = document.getElementById("btn");
 mainBtn.addEventListener("click",function(){
@@ -72,4 +73,8 @@ async function performSearchesWithDelay() {
     mainBtn.classList.remove("btn-clicked");
 }
 
+//Click event for exiting the tab after process confirmation
+exitBtn.addEventListener("click",function(){
+    window.close();
+})
 
