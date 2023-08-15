@@ -1,6 +1,7 @@
 body {
     margin: 0px !important;
     padding: 0px !important;
+    background-image: url(https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=en-US);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -22,7 +23,7 @@ body {
     display: flex;
     flex-direction:row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .btn-container{
     width:120px;
@@ -46,6 +47,11 @@ body {
 }
 p{
     font-size:20px;
+}
+.btn-txt{
+    font-family: 'Urbanist', sans-serif;
+    font-size:18px;
+    font-weight: 700;
 }
 a{
     color:aqua;
@@ -91,7 +97,7 @@ a:hover{
     border-radius:5px;
     transition:0.6s;
 }
-.tab-close{
+.tab-close,.tab-close-btn{
     padding:10px 20px;
     border:1px solid rgb(165, 0, 0);
     border-radius:5px;
@@ -107,12 +113,15 @@ a:hover{
     transition:0.6s;
 
 }
-.tab-close:hover{
+.tab-close:hover,.tab-close-btn:hover{
     border:1px solid rgb(255, 0, 0);
     background-color: rgb(255, 0, 0);
     color:white;
     cursor: pointer;
     transition:0.6s;
+}
+.tab-close-btn{
+    margin-top:-100px !important;
 }
 .popup-container h2,.popup-container p,.popup-btns{
     margin-top:1rem;
@@ -127,7 +136,8 @@ a:hover{
 }
 .user-int-section{
     font-family: 'Urbanist', sans-serif;
-    background-color: rgba(0, 0, 0, 0.445);
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(10px);
     padding:2rem 1rem;
     border-radius:8px;
 }
@@ -149,6 +159,7 @@ input[type='radio'] {
 }
 .type-1 label,.type-2 label{
     margin-left:1rem;
+    font-size:18px;
 }
 .acc-selection-error{
     color:red;

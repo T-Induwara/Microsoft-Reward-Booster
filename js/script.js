@@ -26,6 +26,8 @@ var accType1 = document.getElementById("acc-1");
 var accType2 = document.getElementById("acc-2");
 var errTxt = document.getElementById("acc-error");
 
+var pgCloseBtn = document.getElementById("tab-close-btn");
+
 var mainBtn = document.getElementById("btn");
 mainBtn.addEventListener("click",function(){
     mainBtn.classList.add("btn-clicked");
@@ -141,3 +143,6 @@ exitBtn.addEventListener("click",function(){
     pgFooter.style.display = "block";
 })
 
+pgCloseBtn.addEventListener("click",function(){
+    window.close();
+})
