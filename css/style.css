@@ -34,6 +34,7 @@ body {
     flex-direction:row;
     align-items: center;
     justify-content: start;
+    border:1px solid black;
 }
 .btn-clicked{
     justify-content: end;
@@ -136,10 +137,10 @@ a:hover{
 }
 .user-int-section{
     font-family: 'Urbanist', sans-serif;
-    background-color: rgba(0, 0, 0, 0.205);
-    backdrop-filter: blur(10px);
-    padding:2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.733);
+    padding:4rem 1rem;
     border-radius:8px;
+    color:black;
 }
 .acc-type{
     display:flex;
