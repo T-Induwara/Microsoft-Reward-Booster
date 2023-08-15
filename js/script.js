@@ -1,10 +1,13 @@
-const searchItems = [
+const searchItemsDesktop = [
     "acer",
     "acer predator",
     "react js",
     "gg",
     //If you want to add more items or need to change the list that suits for your preferences, feel free to add those here
 ];
+const searchItemsMobile = [
+    "bye",
+]
 
 var openedTab;
 var pgTitle = document.getElementById("b-title");
@@ -39,11 +42,25 @@ async function performSearch(query) {
 }
 
 async function performSearchesWithDelay() {
-    for (const item of searchItems) {
-        await performSearch(item);
-        await new Promise(resolve => setTimeout(resolve, 1500)); //Delay between 2 tab openings for 3 seconds
-        //console.clear();//Clearing console
+
+    if (window.matchMedia("(max-width: 767px)").matches){
+        // The viewport is less than 768 pixels wide
+        console.log("This is a mobile device.");
+        for (const item of searchItemsMobile) {
+            await performSearch(item);
+            await new Promise(resolve => setTimeout(resolve, 1500)); //Delay between 2 tab openings for 3 seconds
+            //console.clear();//Clearing console
+        }
     }
+    else{
+        console.log("This is a desktop device");
+        for (const item of searchItemsDesktop) {
+            await performSearch(item);
+            await new Promise(resolve => setTimeout(resolve, 1500)); //Delay between 2 tab openings for 3 seconds
+            //console.clear();//Clearing console
+        }
+    }
+    
     await new Promise(resolve => setTimeout(resolve, 500));//Wait 500ms before showing confirmation message
     //console.clear();//Clearing console
 
